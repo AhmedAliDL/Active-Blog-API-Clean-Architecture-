@@ -16,7 +16,7 @@ namespace Active_Blog_Service_API.Controllers
     /// </summary>
     [Route("api/blogs/{id:guid}/content-blocks")]
     [Authorize]
-    public class ContentBlockController(IMediator mediator) : BaseController(mediator)
+    public class ContentBlockController(ISender mediator) : BaseController(mediator)
     {
 
         /// <summary>

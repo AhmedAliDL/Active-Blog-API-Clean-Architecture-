@@ -17,7 +17,7 @@ namespace Active_Blog_Service_API.Controllers
     /// </summary>
     [Route("api/categories")]
     [Authorize(Roles = "admin")]
-    public class CategoryController(IMediator mediator) : BaseController(mediator)
+    public class CategoryController(ISender mediator) : BaseController(mediator)
     {
         /// <summary>
         /// Gets all categories.

@@ -13,7 +13,7 @@ namespace Active_Blog_Service_API.Controllers
     /// Handles follow relationships between users.
     /// </summary>
     [Authorize]
-    public class FollowController(IMediator mediator) : BaseController(mediator)
+    public class FollowController(ISender mediator) : BaseController(mediator)
     {
 
         /// <summary>

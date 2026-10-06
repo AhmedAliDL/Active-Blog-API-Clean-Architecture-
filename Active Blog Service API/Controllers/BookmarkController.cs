@@ -13,7 +13,7 @@ namespace Active_Blog_Service_API.Controllers
     /// Handles the blog bookmarks of the current user.
     /// </summary>
     [Authorize]
-    public class BookmarkController(IMediator mediator) : BaseController(mediator)
+    public class BookmarkController(ISender mediator) : BaseController(mediator)
     {
 
         /// <summary>

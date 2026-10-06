@@ -24,7 +24,7 @@ namespace Active_Blog_Service_API.Controllers
     /// Handles user authentication and account management.
     /// </summary>
     [Route("api/auth")]
-    public class AuthController(IMediator mediator) : BaseController(mediator)
+    public class AuthController(ISender mediator) : BaseController(mediator)
     {
         private const string RefreshTokenKey = "RefreshToken";
         /// <summary>

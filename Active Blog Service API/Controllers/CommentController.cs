@@ -16,7 +16,7 @@ namespace Active_Blog_Service_API.Controllers
     /// Handles blog comments.
     /// </summary>
     [Authorize]
-    public class CommentController(IMediator mediator) : BaseController(mediator)
+    public class CommentController(ISender mediator) : BaseController(mediator)
     {
         /// <summary>
         /// Gets all comments of a blog.

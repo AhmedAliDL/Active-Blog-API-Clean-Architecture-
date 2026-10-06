@@ -17,7 +17,7 @@ namespace Active_Blog_Service_API.Controllers
     /// </summary>
     [Route("api/tags")]
     [Authorize(Roles = "admin")]
-    public class TagController(IMediator mediator) : BaseController(mediator)
+    public class TagController(ISender mediator) : BaseController(mediator)
     {
         /// <summary>
         /// Gets all tags of a category.

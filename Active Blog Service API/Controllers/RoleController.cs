@@ -6,7 +6,6 @@ using App.Application.Roles.Dto;
 using App.Application.Roles.Queries.GetAllRoles;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Active_Blog_Service_API.Controllers
@@ -16,7 +15,7 @@ namespace Active_Blog_Service_API.Controllers
     /// </summary>
     [Route("api/roles")]
     [Authorize(Roles = "admin")]
-    public class RoleController(IMediator mediator) : BaseController(mediator)
+    public class RoleController(ISender mediator) : BaseController(mediator)
     {
         /// <summary>
         /// Gets all roles.

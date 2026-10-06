@@ -12,7 +12,7 @@ namespace Active_Blog_Service_API.Controllers
     /// Handles user notifications and contact messages.
     /// </summary>
     [Authorize]
-    public class NotificationController(IMediator mediator) : BaseController(mediator)
+    public class NotificationController(ISender mediator) : BaseController(mediator)
     {
 
         /// <summary>

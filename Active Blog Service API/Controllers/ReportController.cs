@@ -15,7 +15,7 @@ namespace Active_Blog_Service_API.Controllers
     /// <summary>
     /// Handles blog reports.
     /// </summary>
-    public class ReportController(IMediator mediator) : BaseController(mediator)
+    public class ReportController(ISender mediator) : BaseController(mediator)
     {
         /// <summary>
         /// Gets all submitted reports.

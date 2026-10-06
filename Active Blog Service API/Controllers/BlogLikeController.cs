@@ -14,7 +14,7 @@ namespace Active_Blog_Service_API.Controllers
     /// </summary>
     [Route("api/blogs/{id:guid}/likes")]
     [Authorize]
-    public class BlogLikeController(IMediator mediator) : BaseController(mediator)
+    public class BlogLikeController(ISender mediator) : BaseController(mediator)
     {
         /// <summary>
         /// Gets all likes of a blog.

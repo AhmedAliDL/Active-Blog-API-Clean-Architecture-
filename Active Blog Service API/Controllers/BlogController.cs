@@ -17,7 +17,7 @@ namespace Active_Blog_Service_API.Controllers
     /// </summary>
     [Route("api/blogs")]
     [Authorize]
-    public class BlogController(IMediator mediator) : BaseController(mediator)
+    public class BlogController(ISender mediator) : BaseController(mediator)
     {
         /// <summary>
         /// Gets all blogs.
